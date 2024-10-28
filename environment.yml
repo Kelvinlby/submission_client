@@ -1,0 +1,8 @@
+name: 'submission_client_env'
+
+channels:
+  - conda-forge
+
+dependencies:
+  - grpcio
+  - grpcio-tools
