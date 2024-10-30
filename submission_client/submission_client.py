@@ -7,14 +7,11 @@ import server_pb2
 import server_pb2_grpc
 
 
-
 class SubmissionClient:
   ready = True
   metricbuff = {}
   jobbuff = {}
-
-
-
+  
   def add_metric(self, metric):
     if self.ready & (metric not in self.metricbuff):
       self.ready = False
@@ -23,8 +20,7 @@ class SubmissionClient:
       self.metricbuff[metric] = 0.0
 
       self.ready = True
-
-
+  
   def add_job(self, job):
     if self.ready & (job not in self.metricbuff):
       self.ready = False
@@ -33,7 +29,6 @@ class SubmissionClient:
       self.jobbuff[job] = 0.0
 
       self.ready = True
-
 
   def log_metric(self, metric, value):
     if self.ready:
@@ -46,7 +41,6 @@ class SubmissionClient:
       except KeyError:
         print("Add your metric with SubmissionClient.add_metric first")
 
-
   def log_job(self, job, process):
     if self.ready:
       try:
@@ -57,7 +51,6 @@ class SubmissionClient:
         self.ready = True
       except KeyError:
         print("Add your job with SubmissionClient.log_job first")
-
 
   async def send_message(self):
     logging.info("starting to send message")
