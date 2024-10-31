@@ -4,5 +4,10 @@ channels:
   - conda-forge
 
 dependencies:
-  - grpcio
+  - grpc
   - grpcio-tools
+  - protobuf
+  - grpcio
+  - setuptools
+  - logging
+  - time

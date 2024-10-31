@@ -1,5 +1,4 @@
-from IPython.core.release import author_email
-from numba.scripts.generate_lower_listing import description
+
 from setuptools import setup, find_packages
 
 setup(

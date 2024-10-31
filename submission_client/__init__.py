@@ -1,3 +1,5 @@
-from .submission_client import SubmissionClient
 
-__all__ = ['SubmissionClient']
+from .submission_client import SubmissionClient
+from .server_pb2 import MessageData, ReturnData
+
+__all__ = ['SubmissionClient', 'MessageData', 'ReturnData']
