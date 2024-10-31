@@ -1,0 +1,27 @@
+package:
+  name: 'submission_client'
+  version: '1.0.0'
+
+source:
+  git_url: https://github.com/ECHO-HELLO-WORLD424/submission_client
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - grpcio
+    - grpcio-tools
+
+  run:
+    - python
+    - grpcio
+    - grpcio-tools
+
+test:
+  imports:
+    - submission_client
+
+about:
+  home: https://github.com/ECHO-HELLO-WORLD424/submission_client
+  license: GPL v3.0
+  license_family: GPL
