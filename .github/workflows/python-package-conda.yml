@@ -1,4 +1,4 @@
-name: submission_client
+name: submission
 
 on:
   workflow_dispatch:

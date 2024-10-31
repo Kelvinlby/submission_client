@@ -1,4 +1,4 @@
-{% set name = "submission_client" %}
+{% set name = "submission" %}
 {% set version = "0.1.0" %}
 
 package:

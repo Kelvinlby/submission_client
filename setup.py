@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='submission_client',
+    name='submission',
     version='1.0.0',
     packages=find_packages(),
     author='Patrick Chen',

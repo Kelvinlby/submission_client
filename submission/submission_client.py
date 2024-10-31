@@ -7,7 +7,7 @@ import server_pb2
 import server_pb2_grpc
 
 
-class SubmissionClient:
+class Submission:
   ready = True
   metricbuff = {}
   jobbuff = {}
