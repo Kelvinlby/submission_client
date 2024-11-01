@@ -7,7 +7,7 @@ import server_pb2_grpc
 
 
 
-async def send_message(buff):
+async def send_message(buff, command):
     async with grpc.aio.insecure_channel("localhost:50051") as channel:
         stub = server_pb2_grpc.ListenerStub(channel)
         logging.info('starting to send message')
@@ -16,7 +16,7 @@ async def send_message(buff):
             async def message_iterator():
                 for k, v in buff.items():
                     message = server_pb2.MessageData(
-                            command=0,
+                            command=command,
                             name=k,
                             value=float(v)  # Ensure value is float
                     )
