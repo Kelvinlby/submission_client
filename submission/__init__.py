@@ -5,5 +5,5 @@ from .log_job import log_job
 from .log_metric import log_metric
 from .end_job import end_job
 
-__all__ = ['start_job', 'log_job', 'log_metric', 'end_job']
 
+__all__ = ['start_job', 'log_job', 'log_metric', 'end_job']
