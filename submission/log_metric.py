@@ -1,10 +1,10 @@
 
-import send_message
+from . import send_message
 
 
 def log_metric(name, value):
     buff = {name: value}
     command = 0
-    send_message.send_message(buff, command)
+    send_message(buff, command)
 
 

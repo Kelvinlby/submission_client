@@ -5,22 +5,42 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+channel:
+  conda-forge
+
 source:
   path: .
+
+build:
+  number: 0
+  script: |
+    {{ PYTHON }} -m grpc_tools.protoc -I. --python_out=submission --grpc_python_out=submission submission/server.proto
+    {{ PYTHON }} -m pip install . -vv
+
 
 requirements:
   build:
     - python
+    - pip
     - setuptools
-    - grpcio
     - grpcio-tools
-
+  host:
+    - python
+    - pip
+    - setuptools
+    - grpcio-tools
   run:
     - python
-    - grpcio
-    - grpcio-tools
+    - grpcio >=1.54.0
+    - protobuf
 
+test:
+  imports:
+    - submission
+    - submission.server_pb2
+    - submission.server_pb2_grpc
 
 about:
   home: https://github.com/ECHO-HELLO-WORLD424/submission_client
-  license: GPL v3.0
+  license: GPL
+  summary: 'A package for job submission and monitoring'

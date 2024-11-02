@@ -2,8 +2,8 @@ import logging
 import asyncio
 import grpc
 
-import server_pb2
-import server_pb2_grpc
+from . import server_pb2
+from . import server_pb2_grpc
 
 
 

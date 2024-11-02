@@ -1,8 +1,8 @@
 
-import send_message
+from . import send_message
 
 
 def end_job(name):
     buff = {name: 1.0}
     command = 1
-    send_message.send_message(buff, command)
+    send_message(buff, command)
