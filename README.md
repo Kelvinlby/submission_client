@@ -3,8 +3,32 @@
 - It is designed to send data generated during ML training process to submission
 
 # Installation
-- First, download the .tar file in the release page
-- Then run this command in your terminal
-```shell
-    conda install YOUR_PATH/submission-0.1.0-py312_0.tar.bz2
+- Download the .tar file
+- Move it to YOURPATH/miniconda/conda-bld
+- Run this command in the terminal
+ ```shell
+    conda install --use-local submission
 ```
+# Usage
+- import this module in python
+```Python
+    import asyncio
+    from submission import start_job, log_job, log_metric, end_job
+```
+- To start a job in submission, use
+```Python
+    asyncio.run(submission.start_job(NAME))
+```
+- To log your job in submission, use
+```Python
+    asyncio.run(submission.log_job(NAME, VALUE))
+```
+- To log a metric in submission, use
+```Python
+    asyncio.run(submission.log_metric(NAME, VALUE))
+```
+- To end a job in submission, use
+```Python
+    asyncio.run(submission.end_job(NAME))
+```
+

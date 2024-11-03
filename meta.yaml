@@ -22,14 +22,12 @@ requirements:
     - setuptools
     - grpcio-tools
   host:
-    - python >=3,9
+    - python >=3.9
     - pip
-    - asyncio
     - setuptools
     - grpcio-tools
   run:
-    - python >=3.9
-    - asyncio
+    - python
     - grpcio >=1.67.0
     - protobuf
 
