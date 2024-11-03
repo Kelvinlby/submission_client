@@ -5,9 +5,6 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
-channel:
-  conda-forge
-
 source:
   path: .
 
@@ -16,7 +13,7 @@ build:
   script: |
     {{ PYTHON }} -m grpc_tools.protoc -I. --python_out=submission --grpc_python_out=submission submission/server.proto
     {{ PYTHON }} -m pip install . -vv
-
+  noarch: python
 
 requirements:
   build:
@@ -25,12 +22,14 @@ requirements:
     - setuptools
     - grpcio-tools
   host:
-    - python
+    - python >=3,9
     - pip
+    - asyncio
     - setuptools
     - grpcio-tools
   run:
-    - python
+    - python >=3.9
+    - asyncio
     - grpcio >=1.67.0
     - protobuf
 
