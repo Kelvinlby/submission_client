@@ -18,11 +18,11 @@ async def send_message(buff, command):
                     message = server_pb2.MessageData(
                             command=command,
                             name=k,
-                            value=float(v)  # Ensure value is float
+                            value=float(v)
                     )
                     logging.info(f'Sending Message: {k} = {v}')
                     yield message
-                    await asyncio.sleep(0.01)  # Add small delay between messages
+                    await asyncio.sleep(0.01)
 
             response = await stub.ListenStream(message_iterator())
             logging.info(f"Response received: {response.ret}")

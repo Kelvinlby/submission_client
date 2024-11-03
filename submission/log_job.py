@@ -2,7 +2,7 @@
 from . import send_message
 
 
-def log_job(name, value):
+async def log_job(name, value):
     buff = {name: value}
     command = 1
-    send_message(buff, command)
+    await send_message(buff, command)
