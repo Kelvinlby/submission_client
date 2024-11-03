@@ -1,11 +1,16 @@
 # submission_client
 - This is the source code of a conda package designed for kelvinlby/submission
 - It is designed to send data generated during ML training process to submission
-
+- This is a NIGHTLY release, so don't install it in your base envs
 # Installation
 - Download the .tar file
 - Move it to YOURPATH/miniconda/conda-bld
-- Run this command in the terminal
+- Create a conda environment to test this nightly release
+```shell:
+    conda create -n test_env
+    conda activate test_env
+```
+- Run this command to install submission
  ```shell
     conda install --use-local submission
 ```
