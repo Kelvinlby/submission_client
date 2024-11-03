@@ -2,18 +2,24 @@
 - This is the source code of a conda package designed for kelvinlby/submission
 - It is designed to send data generated during ML training process to submission
 - This is a NIGHTLY release, so don't install it in your base envs
+# Attention
+- Some users may encounter "NoModuleNamedSubmission" error
+- If a dependency error is raised, check this issue: https://github.com/conda/conda/issues/13043
+- Don't install this version of package in your base environment
+
 # Installation
 - Download the .tar file
-- Move it to YOURPATH/miniconda/conda-bld
-- Create a conda environment to test this nightly release
+- - Create a conda environment to test this nightly release
 ```shell:
     conda create -n test_env
     conda activate test_env
 ```
-- Run this command to install submission
+- Move the .tar file to YOURPATH/miniconda/envs/test_env/conda-bld
+- Run this command in the terminal
  ```shell
     conda install --use-local submission
 ```
+
 # Usage
 - import this module in python
 ```Python
@@ -36,4 +42,5 @@
 ```Python
     asyncio.run(submission.end_job(NAME))
 ```
+
 
