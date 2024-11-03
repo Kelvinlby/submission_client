@@ -20,7 +20,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - grpcio-tools
+    - grpcio-tools >=1.67.0
   host:
     - python >=3.9
     - pip
