@@ -33,7 +33,7 @@
 ```
 - To log a metric in submission, use
 ```Python
-    og_metric(NAME, VALUE)
+    log_metric(NAME, VALUE)
 ```
 - To end a job in submission, use
 ```Python
