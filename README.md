@@ -28,19 +28,19 @@
 ```
 - To start a job in submission, use
 ```Python
-    asyncio.run(submission.start_job(NAME))
+    asyncio.run(start_job(NAME))
 ```
 - To log your job in submission, use
 ```Python
-    asyncio.run(submission.log_job(NAME, VALUE))
+    asyncio.run(log_job(NAME, VALUE))
 ```
 - To log a metric in submission, use
 ```Python
-    asyncio.run(submission.log_metric(NAME, VALUE))
+    asyncio.run(log_metric(NAME, VALUE))
 ```
 - To end a job in submission, use
 ```Python
-    asyncio.run(submission.end_job(NAME))
+    asyncio.run(end_job(NAME))
 ```
 
 
