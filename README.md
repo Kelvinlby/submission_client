@@ -8,7 +8,7 @@
 - Don't install this version of package in your base environment
 
 # Installation
-- - Create a conda environment to test this nightly release
+- Create a conda environment to test this nightly release
 ```shell:
     conda create -n test_env
     conda activate test_env
