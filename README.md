@@ -8,39 +8,36 @@
 - Don't install this version of package in your base environment
 
 # Installation
-- Download the .tar file
 - - Create a conda environment to test this nightly release
 ```shell:
     conda create -n test_env
     conda activate test_env
 ```
-- Move the .tar file to YOURPATH/miniconda/envs/test_env/conda-bld
 - Run this command in the terminal
  ```shell
-    conda install --use-local submission
+    conda install patrick_echo_hello_world::submission
 ```
 
 # Usage
 - import this module in python
 ```Python
-    import asyncio
     from submission import start_job, log_job, log_metric, end_job
 ```
 - To start a job in submission, use
 ```Python
-    asyncio.run(start_job(NAME))
+    start_job(NAME)
 ```
 - To log your job in submission, use
 ```Python
-    asyncio.run(log_job(NAME, VALUE))
+    log_job(NAME, VALUE)
 ```
 - To log a metric in submission, use
 ```Python
-    asyncio.run(log_metric(NAME, VALUE))
+    og_metric(NAME, VALUE)
 ```
 - To end a job in submission, use
 ```Python
-    asyncio.run(end_job(NAME))
+    end_job(NAME)
 ```
 
 
