@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='submission',
-    version='0.1.0',
+    version='1.0.0',
     packages=find_packages(),
     package_data={
         'submission': ['*.proto']
