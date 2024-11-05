@@ -1,17 +1,17 @@
 # submission_client
 - This is the source code of a conda package designed for kelvinlby/submission
 - It is designed to send data generated during ML training process to submission
-- This is a NIGHTLY release, so don't install it in your base envs
+
 # Attention
 - Some users may encounter "NoModuleNamedSubmission" error
-- If a dependency error is raised, check this issue: https://github.com/conda/conda/issues/13043
-- Don't install this version of package in your base environment
+- If a dependency error is raised, check this issuehttps://github.com/conda/conda/issues/13043
 
 # Installation
-- Create a conda environment to test this nightly release
+- Install grpcio & grpcio-tools
+> make sure that you have both grpcio & grpcio-tools 1.67.0 or newer
 ```shell:
-    conda create -n test_env
-    conda activate test_env
+    conda install -c conda-forge grpcio
+    conda install -c conda-forge grpcio-tools
 ```
 - Run this command in the terminal
  ```shell
@@ -39,5 +39,3 @@
 ```Python
     end_job(NAME)
 ```
-
-
