@@ -17,7 +17,7 @@ async def _send_message(command: int, name: str, value):
                     name=name,
                     value=value
                 )
-                print(f'Sending Message: command = {command}, name = {name}, value = {value}')
+                logging.info(f'Sending Message: command = {command}, name = {name}, value = {value}')
                 yield message
                 await asyncio.sleep(0.01)
 
