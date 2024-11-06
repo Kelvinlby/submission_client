@@ -3,7 +3,7 @@ from .send_message import _send_message
 
 
 async def __log_job_runner(name: str, value: float):
-    await _send_message(1, name, float(value))
+    await _send_message(1, name, value)
 
 
 def log_job(name: str, value: float):
