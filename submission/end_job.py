@@ -1,11 +1,10 @@
 import asyncio
-from . import send_message
+from .send_message import _send_message
 
 
-async def endjob(name):
-    buff = {name: 1.0}
-    command = 1
-    await send_message(buff, command)
+async def __end_job_runner(name: str):
+    await _send_message(1, name, 1.0)
 
-def end_job(name):
-    asyncio.run(endjob(name))
+
+def end_job(name: str):
+    asyncio.run(__end_job_runner(name))

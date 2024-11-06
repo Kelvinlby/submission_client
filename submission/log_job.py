@@ -1,11 +1,10 @@
 import asyncio
-from . import send_message
+from .send_message import _send_message
 
 
-async def logjob(name, value):
-    buff = {name: value}
-    command = 1
-    await send_message(buff, command)
+async def __log_job_runner(name: str, value: float):
+    await _send_message(1, name, float(value))
 
-def log_job(name, value):
-    asyncio.run(logjob(name, value))
+
+def log_job(name: str, value: float):
+    asyncio.run(__log_job_runner(name, value))

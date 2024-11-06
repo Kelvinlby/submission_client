@@ -1,11 +1,10 @@
 import asyncio
-from . import send_message
+from .send_message import _send_message
 
 
-async def logmetric(name, value):
-    buff = {name: value}
-    command = 0
-    await send_message(buff, command)
+async def __log_metric_runner(name: str, value: float):
+    await _send_message(0, name, float(value))
 
-def log_metric(name, value):
-    asyncio.run(logmetric(name, value))
+
+def log_metric(name: str, value: float):
+    asyncio.run(__log_metric_runner(name, value))
