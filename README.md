@@ -3,8 +3,8 @@
 - It is designed to send data generated during ML training process to submission
 
 # Attention
-- Some users may encounter "NoModuleNamedSubmission" error
-- If a dependency error is raised, check this issuehttps://github.com/conda/conda/issues/13043
+- Please install grpcio & grpcio-tools from conda-forge channel manually
+- If something happens to the "libmamba.so.20" in your conda, refer to this issue ContinuumIO/anaconda-issues/issues/13353
 
 # Installation
 - Install grpcio & grpcio-tools
@@ -21,7 +21,7 @@
 # Usage
 - import this module in python
 ```Python
-    from submission import start_job, log_job, log_metric, end_job
+    from submission import *
 ```
 - To start a job in submission, use
 ```Python

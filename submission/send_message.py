@@ -15,9 +15,9 @@ async def _send_message(command: int, name: str, value):
                 message = server_pb2.MessageData(
                     command=command,
                     name=name,
-                    value=value
+                    value=float(value)
                 )
-                print(f'Sending Message: command = {command}, name = {name}, value = {value}')
+                logging.info(f'Sending Message: command = {command}, name = {name}, value = {value}')
                 yield message
                 await asyncio.sleep(0.01)
 
