@@ -1,7 +1,6 @@
 import time
 from submission import *
 
-
 def main():
     start_job('start_job')
     log_job('log_job', 0.75)
