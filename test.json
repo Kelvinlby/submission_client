@@ -1,1 +1,0 @@
-{"model":{"dict_len":9894,"d_model":4096},"train":{"learning_rate":0.001,"batch_size":256}}
