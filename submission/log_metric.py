@@ -1,3 +1,4 @@
+import threading
 import asyncio
 from .send_message import _send_message
 
@@ -5,6 +6,11 @@ from .send_message import _send_message
 async def __log_metric_runner(name: str, value: float):
     await _send_message(0, name, value)
 
+def __log_metric(name: str, value: float):
+    asyncio.run(__log_metric_runner(name, value))
+
 
 def log_metric(name: str, value: float):
-    asyncio.run(__log_metric_runner(name, value))
+    thread = threading.Thread(target=__log_metric, args=(name, value))
+    thread.daemon = True
+    thread.start()

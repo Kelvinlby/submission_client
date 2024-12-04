@@ -1,19 +1,16 @@
 import time
+import threading
 from submission import *
 
-def main():
+
+def test():
     start_job('start_job')
-    log_job('log_job', 0.75)
-    log_metric('log_metric', 23)
-    time.sleep(5)
-    log_metric('log_metric', 34)
-    time.sleep(5)
-    log_metric('log_metric', 45)
-    time.sleep(5)
-    log_metric('log_metric', 56)
-    time.sleep(5)
-    log_metric('log_metric', 67)
+    for i in range(10):
+        # Simulate some time consuming task
+        time.sleep(2)
+        log_metric('test_1', 2)
+        print(threading.enumerate())
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    test()
